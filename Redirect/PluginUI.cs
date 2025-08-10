@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Numerics;
-using ImGuiNET;
 using System.Collections.Generic;
 using System.Linq;
 using Dalamud.Interface;
 using Dalamud.Interface.Textures;
 using Lumina.Excel.Sheets;
+using Dalamud.Bindings.ImGui;
 
 namespace Redirect {
     class PluginUI : IDisposable {
@@ -170,7 +170,7 @@ namespace Redirect {
             }
 
             var drawsize = size == default ? new Vector2(wrap.Width, wrap.Height) : size;
-            ImGui.Image(wrap.ImGuiHandle, drawsize);
+            ImGui.Image(wrap.Handle, drawsize);
         }
 
         private void DrawActions() {
